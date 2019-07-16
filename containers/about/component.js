@@ -16,7 +16,7 @@ const StyledAbout = styled.div`
   margin-left:auto;
   margin-right:auto;
   display:flex;
-  background-color: #5c97bc;
+  background-color: #fc97bc;
   box-sizing: border-box;
   }
 `
