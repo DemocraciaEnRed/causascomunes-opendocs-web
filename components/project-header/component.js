@@ -21,7 +21,7 @@ const ProjectHeaderContainer = styled.div`
   min-height: 383px;
   width:100%;
   background-color: #1b95ba;
-  background-image: url('${(props) => props.img}');
+  background-image: url(${'/static/assets/bg-mosaico.png'});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -58,10 +58,6 @@ const TopBarWrapper = styled.div`
 
 const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, togglePublish, contextualCommentsCount, contributionsCount, contributorsCount }) => (
   <ProjectHeaderContainer img={project.currentVersion.content.imageCover}>
-    <ProjectBreadcrumb
-      title={project.currentVersion.content.title}
-      id={project._id}
-      section={section} />
     <ProjectHeaderWrapper>
       <TopBarWrapper>
         <UserAvatar headerbar
