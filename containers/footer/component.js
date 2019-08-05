@@ -13,10 +13,6 @@ const FooterWrapper = styled.footer`
 
 const Footer = () => (
   <FooterWrapper>
-    <FooterTextWrapper>
-      <P>&nbsp;</P>
-      <P>&nbsp;</P>
-    </FooterTextWrapper>
   </FooterWrapper>
 )
 
