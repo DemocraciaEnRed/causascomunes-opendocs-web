@@ -106,6 +106,8 @@ injectGlobal`
     --secondary-color: #A5CEE7;
     --highlight: #ED8862;
     --warning: #E86062;
+    
+    --color-azul-principal: #2a4b8c;
 
     /* Fonts */
     --regular: 'Barlow-Regular';
