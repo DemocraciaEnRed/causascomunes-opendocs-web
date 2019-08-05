@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 const StyledSecondaryNavbarTitle = styled.h2`
   font-size: 2rem;
-  color: #101a21;
+  color: var(--color-azul-principal);
+  text-transform: uppercase;
   @media (max-width: 640px) {
     font-size: 1.5rem;
   }

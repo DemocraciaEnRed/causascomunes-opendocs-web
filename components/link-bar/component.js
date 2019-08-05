@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   list-style:none;
   padding-left:0;
   > a {
-    color: #203340;
+    color: var(--color-azul-principal);
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.6rem;

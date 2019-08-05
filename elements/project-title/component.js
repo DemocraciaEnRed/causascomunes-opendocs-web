@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const ProjectTitle = styled.h1`
   font-size: 4rem;
-  font-family: var(--bold);
+  /*font-family: var(--bold);*/
   line-height: 1.08;
   color: var(--color-azul-principal);
   align-self: flex-end;
