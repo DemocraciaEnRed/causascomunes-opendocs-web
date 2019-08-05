@@ -32,7 +32,7 @@ export default ({ id }) => {
       <IconWrapper>
         <SocialIcon
           img={'/static/assets/facebook-icon.svg'}
-          link={`http://www.facebook.com/sharer.php?u=${socialLinksUrl}`}
+          link={`http://www.facebook.com/sharer/sharer.php?u=${socialLinksUrl}`}
           target={'_blank'}
           rel={'noopener noreferrer'} />
 
