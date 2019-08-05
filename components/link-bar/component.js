@@ -13,6 +13,7 @@ const Wrapper = styled.div`
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.6rem;
+    text-transform: uppercase;
     &:last-child{
       padding-right:0px;
     }

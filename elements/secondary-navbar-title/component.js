@@ -14,7 +14,7 @@ const Span = styled.span`
 
 const SecondaryNavbarTitle = () => (
   <StyledSecondaryNavbarTitle>
-   Portal de <Span>Leyes Abiertas</Span>
+   Portal de <Span>Propuestas</Span>
   </StyledSecondaryNavbarTitle>
 )
 
