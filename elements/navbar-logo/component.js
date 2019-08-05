@@ -11,7 +11,7 @@ justify-content:center;
 const Logo = styled.div`
   width: 130px;
   height: 98px;
-  background-image:url(${'/static/assets/diputados.png'});
+  background-image:url(${'/static/assets/cc-logo-color.png'});
   background-size: cover;
   background-position: center;  
   box-sizing: border-box;
