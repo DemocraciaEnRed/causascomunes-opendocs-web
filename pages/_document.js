@@ -55,6 +55,48 @@ injectGlobal`
     src: url('/static/fonts/Roboto/Roboto-Regular.ttf');
   }
 
+/* Barlow */
+  @font-face {
+    font-family: Barlow-Black;
+    src: url('/static/fonts/Barlow/Barlow-Black.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-BlackItalic;
+    src: url('/static/fonts/Barlow/Barlow-BlackItalic.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-Bold;
+    src: url('/static/fonts/Barlow/Barlow-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-BoldItalic;
+    src: url('/static/fonts/Barlow/Barlow-BoldItalic.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-Italic;
+    src: url('/static/fonts/Barlow/Barlow-Italic.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-Medium;
+    src: url('/static/fonts/Barlow/Barlow-Medium.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-MediumItalic;
+    src: url('/static/fonts/Barlow/Barlow-MediumItalic.ttf');
+  }
+
+  @font-face {
+    font-family: Barlow-Regular;
+    src: url('/static/fonts/Barlow/Barlow-Regular.ttf');
+  }
+
+
   :root {
     /* Colors */
     --white: #FFFFFF;
@@ -66,14 +108,14 @@ injectGlobal`
     --warning: #E86062;
 
     /* Fonts */
-    --regular: 'Roboto-Regular';
-    --black: 'Roboto-Black';
-    --black-italic: 'Roboto-BlackItalic';
-    --bold: 'Roboto-Bold';
-    --bold-italic: 'Roboto-BoldItalic';
-    --italic: 'Roboto-Italic';
-    --medium: 'Roboto-Medium';
-    --medium-italic: 'Roboto-MediumItalic';
+    --regular: 'Barlow-Regular';
+    --black: 'Barlow-Black';
+    --black-italic: 'Barlow-BlackItalic';
+    --bold: 'Barlow-Bold';
+    --bold-italic: 'Barlow-BoldItalic';
+    --italic: 'Barlow-Italic';
+    --medium: 'Barlow-Medium';
+    --medium-italic: 'Barlow-MediumItalic';
 
     /*background sizes */
     --lined: calc(width/22);
@@ -88,7 +130,7 @@ injectGlobal`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--regular), 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--regular), 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--black);
   }
   
@@ -98,7 +140,7 @@ injectGlobal`
     width: 100%;
     background-color: var(--white);
     color: var(--black);
-    font-family: var(--regular), 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--regular), 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   a {
