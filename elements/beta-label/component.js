@@ -43,13 +43,6 @@ const BetaLabelContainer = styled.div`
 
 const BetaLabel = () => (
   <BetaLabelContainer>
-    <Link href='/info?section=sobre-el-sitio'>
-      <a>
-        <Label>Versión beta
-          <Version className='version'>{version}</Version>
-        </Label>
-      </a>
-    </Link>
   </BetaLabelContainer>
 )
 
