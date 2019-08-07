@@ -21,14 +21,14 @@ const buttons = [
     'name': 'Cómo participar',
     'value': 'como-participar'
   },
-  {
+  /*{
     'name': 'Preguntas frecuentes',
     'value': 'faq'
   },
   {
     'name': 'Sobre el sitio',
     'value': 'sobre-el-sitio'
-  },
+  },*/
   {
     'name': 'Contacto',
     'value': 'contacto'
@@ -38,8 +38,8 @@ const buttons = [
 const content = {
   'como-participar': <ComoParticipar />,
   'acerca-de': <SobreLaPlataforma />,
-  'faq': <FAQ />,
-  'sobre-el-sitio': <SobreElSitio />,
+  //'faq': <FAQ />,
+  //'sobre-el-sitio': <SobreElSitio />,
   'contacto': <Contacto />
 }
 
@@ -63,9 +63,6 @@ const StaticInfo = (props) => (
             {button.name}
           </StaticInfoButton>
         ))}
-        <StaticInfoButton onClick={() => window.open('/static/files/congreso_manual_de_usuario.pdf', '_blank')}>
-          <Icon icon={download} size={16} /> Manual de usuario
-        </StaticInfoButton>
       </StaticInfoNav>
     </StaticInfoWrapper>
   </StyledStaticInfo>
