@@ -47,7 +47,6 @@ class Info extends Component {
         <StaticInfo
           section={this.state.section}
           changeSection={this.changeSection} />
-        <SecondaryFooter />
         <Footer />
       </div>
     )
