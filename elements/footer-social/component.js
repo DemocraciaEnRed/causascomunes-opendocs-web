@@ -2,27 +2,30 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const StyledText = styled.div`
+const StyledIcons = styled.div`
   background-color: #fff;
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
   justify-content:center;
   align-items: center;
-  height: 256px;
+  height: 46px;
   text-align: center;
+  margin: 32px 0;
+  
+  & > a { margin: 0 8px; }
 `
-const FooterText = ({ children }) => (
-  <StyledText>
+const FooterSocial = ({ children }) => (
+  <StyledIcons>
     { children }
-  </StyledText>
+  </StyledIcons>
 
 )
 
-FooterText.propTypes = {
+FooterSocial.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired
 }
 
-export default FooterText
+export default FooterSocial
