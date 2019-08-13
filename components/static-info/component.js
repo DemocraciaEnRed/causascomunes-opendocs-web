@@ -11,6 +11,7 @@ import FAQ from '../faq/component'
 import SobreLaPlataforma from '../sobre-la-plataforma/component'
 import SobreElSitio from '../sobre-el-sitio/component'
 import Contacto from '../contacto/component'
+import TermsYConds from '../terms-y-conds-nuevo/component'
 
 const buttons = [
   {
@@ -24,11 +25,11 @@ const buttons = [
   /*{
     'name': 'Preguntas frecuentes',
     'value': 'faq'
-  },
-  {
-    'name': 'Sobre el sitio',
-    'value': 'sobre-el-sitio'
   },*/
+  {
+    'name': 'Terminos y condiciones',
+    'value': 'terms-y-conds-nuevo'
+  },
   {
     'name': 'Contacto',
     'value': 'contacto'
@@ -39,7 +40,7 @@ const content = {
   'como-participar': <ComoParticipar />,
   'acerca-de': <SobreLaPlataforma />,
   //'faq': <FAQ />,
-  //'sobre-el-sitio': <SobreElSitio />,
+  'terms-y-conds-nuevo': <TermsYConds />,
   'contacto': <Contacto />
 }
 
