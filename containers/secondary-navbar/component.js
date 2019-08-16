@@ -19,12 +19,43 @@ const SecondaryBar = styled.div`
   }
 `
 
+const NavbarDropdown = styled.div`
+  position: relative;
+  cursor: pointer;
+  &:hover, &:active {
+    > ul {
+        display: block;
+    }
+  }
+`;
+
+const NavbarDropdownContent = styled.ul`
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 160px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    left: -10px;
+    margin-top: 5px;
+    > li {
+      color: var(--color-azul-principal);
+      display: block;
+      padding: 10px 20px;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      &:hover, &:focus, &:active {
+        background-color: var(--color-azul-principal);
+        color: #f6f6f6;
+      }
+      a {
+        display: block;
+      }
+    }
+  `;
+
 const links = [
-  {
-    name: 'Propuestas',
-    hash: '#projects',
-    link: '/#projects'
-  },
   {
     name: 'Cómo participar',
     hash: '#participate',
@@ -37,18 +68,49 @@ const links = [
   }
 ]
 
+const causas = [
+  {
+    name: 'Trabajo',
+    link: 'trabajo',
+  },
+  {
+    name: 'Ambiente',
+    link: 'ambiente',
+  },
+  {
+    name: 'Género',
+    link: 'genero',
+  },
+  {
+    name: 'Vivienda',
+    link: 'vivienda',
+  },
+  {
+    name: 'Drogas',
+    link: 'drogas',
+  },
+  {
+    name: 'Transparencia',
+    link: 'transparencia',
+  },
+  {
+    name: 'Ciencia',
+    link: 'ciencia',
+  }
+]
+
 const scroll = (target) => (e) => {
   jump(target)
 }
 
-const LandingLink = ({ name, value}) => (
+const LandingLink = ({ name, value }) => (
   <a onClick={scroll(value)}>{name}</a>
 )
 
-const NavbarLink = ({ name, link}) => (
+const NavbarLink = ({ name, link }) => (
   <Link href={link}>
     <a>
-      { name }
+      {name}
     </a>
   </Link>
 )
@@ -57,6 +119,14 @@ const SecondaryNavbar = ({ isLanding }) => (
   <SecondaryBar>
     <StyledSecondaryNavbarTitle />
     <LinkBar>
+      <NavbarDropdown className="link">
+        <span>Propuestas</span>
+        <NavbarDropdownContent>
+          {causas.map((causa, i) => (
+            <li key={i}><Link href={causa.link}>{causa.name}</Link></li>
+          ))}
+        </NavbarDropdownContent>
+      </NavbarDropdown>
       {links.map((li, i) => {
         return isLanding
           ? <LandingLink

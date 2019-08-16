@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   align-items:center;
   list-style:none;
   padding-left:0;
-  > a {
+  > a, .link {
     color: var(--color-azul-principal);
     display: inline-block;
     padding: 10px 20px;
@@ -16,11 +16,6 @@ const Wrapper = styled.div`
     text-transform: uppercase;
     &:last-child{
       padding-right:0px;
-    }
-    @media (max-width:760px){
-      :first-child{
-        height:40px;
-      }
     }
   }
 `
