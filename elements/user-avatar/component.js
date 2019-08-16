@@ -15,12 +15,16 @@ text-align:left;
 margin-bottom:2rem;
 min-width:150px;
 `
+const userData = {
+  'Forrest Gump': { url: 'http://duckduckgo.com', img: 'user-1.png'}
+}
+
 const Avatar = styled.div`
   width: 40px;
   min-width:40px;
   height: 40px;
-  border-radius:50%;
-  background-image: url('${(props) => props.userId ? `${API_URL}/api/v1/users/${props.userId}/avatar` : '/static/assets/userdefault.png'}');
+  border-radius:50%;${'/static/assets/cc-logo-color.png'});
+  background-image: url('${(props) => props.userId ? `/static/assets/users-imgs/${userData[props.name].img}` : '/static/assets/userdefault.png'}');
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -52,16 +56,15 @@ justify-content:space-between;
 const IconWrapper = styled.div`
   padding-right:.5rem;`
 
- 
 const UserAvatar = ({ userId, name, party, badge }) => (
   <Wrapper>
-    <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
-      <Avatar userId={userId} />
-    </Link>
+    <a href={ userData[name].url }>
+      <Avatar userId={userId} name={name} />
+    </a>
     <TextWrapper>
-      <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
+      <a href={ userData[name].url }>
         <Name>{name}</Name>
-      </Link>
+      </a>
       <Party>
         { badge && <IconWrapper><Icon icon={checkCircle} /></IconWrapper>}
         <p>{party}</p>
