@@ -12,11 +12,7 @@ export default () => (
   <div>
     <NavBar />
     <SecondaryNavbar isLanding />
-    <Hero />
     <Projects />
-    <Participate />
-    <About />
-    <SecondaryFooter />
     <Footer />
   </div>
 )
