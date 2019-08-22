@@ -18,13 +18,16 @@ min-width:150px;
 const userData = {
   'Forrest Gump': { url: 'http://duckduckgo.com', img: 'user-1.png'}
 }
+const orgasPorProyectId = {
+  '5d2ddec1a22da9271f3a428a': { url: 'http://duckduckgo.com', img: 'user-1.png'}
+}
 
 const Avatar = styled.div`
   width: 40px;
   min-width:40px;
   height: 40px;
   border-radius:50%;${'/static/assets/cc-logo-color.png'});
-  background-image: url('${(props) => props.userId ? `/static/assets/users-imgs/${userData[props.name].img}` : '/static/assets/userdefault.png'}');
+  background-image: url('${(props) => props.userId && orgasPorProyectId[props.proyectId] ? `/static/assets/users-imgs/${orgasPorProyectId[props.proyectId].img}` : '/static/assets/userdefault.png'}');
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -56,13 +59,13 @@ justify-content:space-between;
 const IconWrapper = styled.div`
   padding-right:.5rem;`
 
-const UserAvatar = ({ userId, name, party, badge }) => (
+const UserAvatar = ({ userId, name, party, badge, proyectId }) => (
   <Wrapper>
-    <a href={ userData[name].url }>
-      <Avatar userId={userId} name={name} />
+    <a href={ orgasPorProyectId[proyectId] ? orgasPorProyectId[proyectId].url : '' }>
+      <Avatar userId={userId} proyectId={proyectId} />
     </a>
     <TextWrapper>
-      <a href={ userData[name].url }>
+      <a href={ orgasPorProyectId[proyectId] ? orgasPorProyectId[proyectId].url : '' }>
         <Name>{name}</Name>
       </a>
       <Party>
@@ -78,7 +81,8 @@ UserAvatar.propTypes = {
   userId: PropTypes.string,
   party: PropTypes.string,
   authorId: PropTypes.string,
-  badge: PropTypes.string
+  badge: PropTypes.string,
+  proyectId: PropTypes.string
 }
 
 export default UserAvatar
