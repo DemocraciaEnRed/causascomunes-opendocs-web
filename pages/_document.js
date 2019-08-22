@@ -169,11 +169,11 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
           {
             NODE_ENV === 'production' &&
-            <script async src='https://www.googletagmanager.com/gtag/js?id=UA-109170776-3' />
+            <script async src='https://www.googletagmanager.com/gtag/js?id=UA-146273009-1' />
           }
           {
             NODE_ENV === 'production' &&
-            <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-109170776-3');` }} />
+            <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-146273009-1');` }} />
           }
         </Head>
         <body>
