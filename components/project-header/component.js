@@ -61,6 +61,7 @@ const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, to
     <ProjectHeaderWrapper>
       <TopBarWrapper>
         <UserAvatar headerbar
+          proyectId={project._id}
           authorId={project.author._id}
           userId={project.author._id}
           name={project.author.fullname}
