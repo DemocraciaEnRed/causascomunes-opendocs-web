@@ -17,6 +17,9 @@ const Wrapper = styled.div`
     &:last-child{
       padding-right:0px;
     }
+    i {
+      padding-left: 4px;
+    } 
   }
 `
 const LinkBar = ({ children }) => (

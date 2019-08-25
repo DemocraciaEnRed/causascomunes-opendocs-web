@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import jump from 'jump.js'
 import Link from 'next/link'
 import StyledSecondaryNavbarTitle from '../../elements/secondary-navbar-title/component'
 import LinkBar from '../../components/link-bar/component'
+import Icon from 'react-icons-kit'
+import { chevronDown } from 'react-icons-kit/fa/chevronDown'
 
 const SecondaryBar = styled.div`
   height:4rem;
@@ -22,7 +24,7 @@ const SecondaryBar = styled.div`
 const NavbarDropdown = styled.div`
   position: relative;
   cursor: pointer;
-  &:hover, &:active {
+  &.open {
     > ul {
         display: block;
     }
@@ -115,32 +117,52 @@ const NavbarLink = ({ name, link }) => (
   </Link>
 )
 
-const SecondaryNavbar = ({ isLanding }) => (
-  <SecondaryBar>
-    <StyledSecondaryNavbarTitle />
-    <LinkBar>
-      <NavbarDropdown className="link">
-        <span>Propuestas</span>
-        <NavbarDropdownContent>
-          {causas.map((causa, i) => (
-            <li key={i}><Link href={causa.link}>{causa.name}</Link></li>
-          ))}
-        </NavbarDropdownContent>
-      </NavbarDropdown>
-      {links.map((li, i) => {
-        return isLanding
-          ? <LandingLink
-            key={i}
-            name={li.name}
-            value={li.hash} />
-          : <NavbarLink
-            key={i}
-            name={li.name}
-            link={li.link} />
-      })}
-    </LinkBar>
-  </SecondaryBar>
-)
+class SecondaryNavbar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showDropdown: false
+    }
+    this.toggleDropdown = this.toggleDropdown.bind(this)
+  }
+
+  toggleDropdown() {
+    this.setState(prevState => ({
+      showDropdown: !prevState.showDropdown
+    }));
+  }
+  render() {
+    return (
+      <SecondaryBar>
+        <StyledSecondaryNavbarTitle />
+        <LinkBar>
+          <NavbarDropdown className={"link " + (this.state.showDropdown ? "open" : "")}>
+            <span onClick={this.toggleDropdown}>
+              Propuestas
+              <Icon icon={chevronDown} size={12} />
+            </span>
+            <NavbarDropdownContent>
+              {causas.map((causa, i) => (
+                <li key={i}><Link href={causa.link}>{causa.name}</Link></li>
+              ))}
+            </NavbarDropdownContent>
+          </NavbarDropdown>
+          {links.map((li, i) => {
+            return this.props.isLanding
+              ? <LandingLink
+                key={i}
+                name={li.name}
+                value={li.hash} />
+              : <NavbarLink
+                key={i}
+                name={li.name}
+                link={li.link} />
+          })}
+        </LinkBar>
+      </SecondaryBar>
+    )
+  }
+}
 
 SecondaryNavbar.propTypes = {
   isLanding: PropTypes.bool
