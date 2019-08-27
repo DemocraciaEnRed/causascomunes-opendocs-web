@@ -166,8 +166,8 @@ export default class MyDocument extends Document {
           <title>Portal de Propuestas - Causas Comunes</title>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta charSet='utf-8' />
-          <meta property="og:image" content="/static/assets/fb-banner.png"/>
-          <meta property="og:image:secure_url" content="/static/assets/fb-banner.png" />
+          <meta property="og:image" content="https://propuestas.causascomunes.org/static/assets/fb-banner.png"/>
+          <meta property="og:image:secure_url" content="https://propuestas.causascomunes.org/static/assets/fb-banner.png" />
           <meta property="og:title" content="Portal de Propuestas - Causas Comunes" />
           <meta property="og:description" content="Propuestas para el proyecto Causas Comunes" />  
 
