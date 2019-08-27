@@ -168,6 +168,8 @@ export default class MyDocument extends Document {
           <meta charSet='utf-8' />
           <meta property="og:image" content="/static/assets/fb-banner.png"/>
           <meta property="og:image:secure_url" content="/static/assets/fb-banner.png" />
+          <meta property="og:title" content="Portal de Propuestas - Causas Comunes" />
+          <meta property="og:description" content="Propuestas para el proyecto Causas Comunes" />  
 
           {this.props.styleTags}
           {
