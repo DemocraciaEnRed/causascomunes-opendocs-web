@@ -24,8 +24,9 @@ const SocialSpan = styled.span`
   `
 export default ({ id }) => {
   const socialLinksUrl = (window.location.origin + '/propuesta?id=' + id)
-  const twitterText = encodeURIComponent('Propuesta de Causas Comunes'))
+  const twitterText = encodeURIComponent('Una de las propuestas de Causas Comunes')
   const twitterHashtag = encodeURIComponent('CausasComunes')
+  const twitterLink = 'https://twitter.com/intent/tweet?url='+socialLinksUrl+'&text='+twitterText+'&via=causas_comunes&lang=es'
 
   return (
     <SocialWrapper>
@@ -38,7 +39,7 @@ export default ({ id }) => {
           rel={'noopener noreferrer'} />
 
         <SocialIcon img={'/static/assets/twitter-icon.svg'}
-          link={`http://twitter.com/share?text=${twitterText}&url=${socialLinksUrl}&hashtags=${twitterHashtag}`}
+          link={twitterLink}
           target={'_blank'}
           rel={'noopener noreferrer'} />
       </IconWrapper>
