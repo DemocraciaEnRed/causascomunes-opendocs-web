@@ -3,20 +3,23 @@ import styled from 'styled-components'
 
 const nodes = {
   title: styled.h2`
-    margin-bottom: 1.5em;
-    font-size: 18px;
-    font-weight: bold;
+    margin: 3rem 0;
+    font-size: 3rem;
+    font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.42;
     letter-spacing: normal;
     color: #203340;
+    & span span {
+    font-family: 'Barlow-Bold' !important;
+    }
   `,
 
   paragraph: styled.p`
     font-size: 18px;
-    line-height: 1.94;
-    padding-bottom: 3rem;
+    line-height: 1.55;
+    margin-bottom: 2rem;
     color: #203340;
   `,
 
@@ -33,7 +36,7 @@ const nodes = {
 }
 
 const marks = {
-  bold: styled.strong`font-weight: bold`,
+  bold: styled.strong`font-weight: normal; font-family:'Barlow-Bold'`,
 
   italic: styled.em`font-style: italic`,
 

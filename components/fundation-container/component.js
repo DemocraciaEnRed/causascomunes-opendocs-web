@@ -12,11 +12,11 @@ const StyledEditorWrapper = styled.div`
   margin-top: 3em;
   // .editor {
   //   max-width: 700px;
-    span {
-      font-size: 1.8rem;
-      line-height: 1.89;
-      color: #203340;
-    }
+    // span {
+    //   font-size: 1.8rem;
+    //   line-height: 1.89;
+    //   color: #203340;
+    // }
   }
 `
 const FinalWords = styled.div`
