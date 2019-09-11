@@ -77,7 +77,7 @@ const causas = [
   },
   {
     name: 'Ambiente',
-    link: 'ambiente',
+    link: 'https://propuestas.causascomunes.org/articulado?id=5d78f015ee136700188ea5bc',
   },
   {
     name: 'Género',
