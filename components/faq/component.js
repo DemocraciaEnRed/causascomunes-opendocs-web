@@ -13,21 +13,18 @@ export default () => (
     <StaticInfoTitle>Preguntas Frecuentes</StaticInfoTitle>
     <StyledDiv>
       <StaticInfoBold>
-        ¿Cuál es la diferencia entre proyecto de ley y una propuesta de ley?
+        ¿Por qué formulan una propuesta como “proyecto de ley”?
       </StaticInfoBold>
       <StaticInfoP>
-      Un proyecto de ley es un texto presentado en la mesa de entradas de alguna de las dos Cámaras, tiene número de expediente y giro a las Comisiones apropiadas.
-      </StaticInfoP>
-      <StaticInfoP>
-      Una propuesta de ley es un texto que aún no se presentó formalmente en la Cámara, sino que está en un estado de investigación previa, es un “ante-proyecto de ley”.
+      Porque queremos que nuestras propuestas se conviertan en Ley. Para eso, tienen que tratarse en el ámbito que corresponde según nuestra Constitución, el Congreso de la Nación. Nuestras propuestas se formulan, así, atendiendo a criterios mínimos de técnica legislativa.   
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
       <StaticInfoBold>
-        ¿Los diputados y las diputadas leen los comentarios?
+        ¿Quiénes leen los comentarios?
       </StaticInfoBold>
       <StaticInfoP>
-      Si, los diputados y las diputadas administran y moderan sus propuestas y proyectos de ley. Leen y analizan los comentarios para realizar cambios que consideran necesarios para mejorar la propuesta de ley.
+      Los comentarios serán leídos por representantes de organizaciones de la sociedad civil que patrocinan cada una de las agendas. Podés contar con que son personas comprometidas y conocedoras de las temáticas que tratamos. Estas personas van a analizar las sugerencias y, en caso de encontrarlas pertinentes, las incorporarán a la propuesta, para mejorarla.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
@@ -35,7 +32,7 @@ export default () => (
       ¿Cuál es el plazo para realizar comentarios?
       </StaticInfoBold>
       <StaticInfoP>
-      El plazo para realizar comentarios es diferente en cada propuesta de ley y estará indicada al inicio de la propuesta.
+      El plazo para realizar comentarios en cada propuesta de ley está indicado al inicio de la propuesta.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
@@ -43,23 +40,19 @@ export default () => (
       ¿Cómo puedo saber qué pasó con la propuesta, una vez finalizado el plazo para hacer aportes?
       </StaticInfoBold>
       <StaticInfoP>
-      Una vez finalizado el plazo, recibirás una notificación con la versión final de la propuesta. Podrás ingresar al sitio para ver los resultados, con la cantidad de aportes tenidos en consideración y la cantidad de comentarios realizados.
+      Una vez finalizado el plazo estipulado, recibirás una notificación con la versión final de la propuesta. Podrás ingresar al sitio para ver los resultados, con la cantidad de aportes tenidos en consideración y la cantidad de comentarios realizados.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
       <StaticInfoBold>
-        ¿Cómo se miden los aportes?
+        ¿Me puedo contactar Causas Comunes? ¿Cómo?
       </StaticInfoBold>
       <StaticInfoP>
-      Los diputados y las diputadas leerán los comentarios y sugerencias. A medida que el proyecto avanza seleccionarán como aportes los comentarios tenidos en cuenta a la hora de efectuar modificaciones para una nueva versión del futuro proyecto.
-      </StaticInfoP>
-    </StyledDiv>
-    <StyledDiv>
-      <StaticInfoBold>
-        ¿Me puedo contactar con el diputado? ¿Cómo?
-      </StaticInfoBold>
-      <StaticInfoP>
-        A través de los medios publicados por el sitio web oficial de la H. Cámara de Diputados: <u><a rel='noopener noreferrer' target='_blank' href='https://www.diputados.gob.ar/diputados/listadip.html'>https://www.diputados.gob.ar/diputados/listadip.html</a></u>
+        Nos podés encontrar en redes:<br />
+        <u><a rel='noopener noreferrer' target='_blank' href='https://twitter.com/causas_comunes'>twitter.com/causas_comunes</a></u><br />
+        <u><a rel='noopener noreferrer' target='_blank' href='https://instagram.com/causascomunes'>instagram.com/causascomunes</a></u><br />
+        <u><a rel='noopener noreferrer' target='_blank' href='https://facebook.com/Causas-Comunes-449280685874685'>facebook.com/Causas-Comunes</a></u><br />
+        O escribirnos a <u><a rel='noopener noreferrer' target='_blank' href='mailto:causascomunesx@gmail.com'>causascomunesx@gmail.com</a></u>
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
@@ -67,10 +60,10 @@ export default () => (
         ¿Puedo presentar una propuesta?
       </StaticInfoBold>
       <StaticInfoP>
-      Las propuestas presentadas son autoría de los diputados y las diputadas, que luego podrán presentarlos como proyectos de ley en la Mesa de Entradas de la Cámara.
+      Para el período electoral vamos a tratar las 6 propuestas publicadas. Queremos focalizar nuestros esfuerzos en ellas.
       </StaticInfoP>
       <StaticInfoP>
-      Esta facultad de presentar proyectos de ley, la “iniciativa legislativa”, corresponde a diputados, senadores y al presidente de la Nación. La última reforma constitucional de 1994 incorporó también la “iniciativa popular”, que permite a los ciudadanos presentar proyectos de ley ante la Cámara de Diputados, siempre que cumplan con los requisitos de la ley <a rel='noopener noreferrer' target='_blank' href='http://servicios.infoleg.gob.ar/infolegInternet/anexos/40000-44999/41025/norma.htm'><u>24.747</u>.</a>
+      Pero para el tiempo pos-electoral no habrá límites: si tenés una idea que quieras compartir con nos, escribinos a: <a rel='noopener noreferrer' target='_blank' href='mailto:causascomunesx@gmail.com'><u>causascomunesx@gmail.com</u>.</a>
       </StaticInfoP>
     </StyledDiv>
   </section>

@@ -24,27 +24,21 @@ export default () => (
         ¿Cómo funciona?
       </StaticInfoBold>
       <StaticInfoP>
-        Los Diputados suben <strong>propuestas y proyectos de ley</strong> para que puedan ser enriquecidas: se pueden hacer aportes, comentarios y sugerencias
+        En esta plataforma encontrarás propuestas formuladas como Proyectos de Ley, elaborados y presentados por organizaciones o referentes temáticos de seis áreas diferentes. Creemos que estos proyectos pueden ser enriquecidos con tu punto de vista; así, podés hacer aportes, comentarios y sugerencias
+      </StaticInfoP>
+      <StaticInfoP>
+        Las organizaciones que elaboraron los proyectos analizarán tus <strong>aportes</strong> a la propuesta y a partir de ellos realizarán cambios para construir una versión final del texto que sea mejor, que sea más robusta.
       </StaticInfoP>
       <StaticInfoBold>
-        ¿Qué es una <em>propuesta</em>?
+        ¿Qué entendemos por <em>aporte</em>?
       </StaticInfoBold>
       <StaticInfoP>
-        Una propuesta de ley es el <strong>estado anterior al proyecto de ley</strong>, es decir, antes de iniciado el trámite parlamentario.
+        Un aporte se hace seleccionando una parte específica del texto que llame tu atención. Una vez seleccionada, podrás hacer una sugerencia, una crítica o un complemento al texto que has seleccionado. 
       </StaticInfoP>
       <StaticInfoP>
-        Los diputados analizarán los <strong>aportes</strong> realizados por la ciudadanía en la propuesta y a partir de esto realizarán los cambios que consideren necesarios para la
- versión final del texto.
+        Lxs usuarixs cuyos aportes fueran incorporados, serán consideradxs colaboradores en la redacción de la propuesta.
       </StaticInfoP>
-      <StaticInfoBold>
-        ¿Qué entendemos por aporte?
-      </StaticInfoBold>
-      <StaticInfoP>A través de esta plataforma, la ciudadanía puede hacer <strong>comentarios generales</strong>, para dar su opinión o postura general sobre la propuesta de ley. Además, puede realizar aportes puntuales seleccionando una parte específica del texto y haciendo un <strong>aporte particular</strong>.
-      </StaticInfoP>
-      <StaticInfoP>
-        Los diputados analizarán los <strong>aportes</strong>. En la medida en se realicen cambios a la propuesta original se generarán nuevas versiones de la propuesta. Así, las y los usuarios cuyos aportes fueran incorporados, serán colaboradores en la redacción de la propuesta.
-      </StaticInfoP>
-      <StaticInfoP>Para más detalles sobre las funcionalidades básicas de esta plataforma descargue/consulte el <Icon icon={download} size={16} /> <Link href='/static/files/congreso_manual_de_usuario.pdf'><ManualLink>Manual de usuario</ManualLink></Link></StaticInfoP>
+      <StaticInfoP>Para más detalles sobre las funcionalidades básicas de esta plataforma descargue/consulte el <Icon icon={download} size={16} /> <Link href='/static/files/X_manual_de_usuario.pdf'><ManualLink>Manual de usuario</ManualLink></Link></StaticInfoP>
     </ComoParticiparWrapper>
   </section>
 )

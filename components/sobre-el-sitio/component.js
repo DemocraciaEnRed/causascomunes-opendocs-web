@@ -12,10 +12,7 @@ export default () => (
     <StaticInfoTitle>Sobre el sitio</StaticInfoTitle>
     <StyledDiv>
       <StaticInfoP>
-      El Portal de Leyes Abiertas es un desarrollo basado en la tecnología provista por Democracia en Red, coordinado por el Programa de Modernización parlamentaria de la Cámara de Diputados de La Nación.
-      </StaticInfoP>
-      <StaticInfoP>
-      Esta es una versión “Beta”, aún en evaluación y desarrollo. Como tal, puede tener errores que pueden ser reportados a <a href='mailto:leyesabiertas@hcdn.gob.ar'>leyesabiertas@hcdn.gob.ar</a>.
+      “Propuestas.CausasComunes” es un desarrollo basado en tecnología provista por <a href='https://democraciaenred.org'>Democracia en Red</a>.
       </StaticInfoP>
     </StyledDiv>
   </section>

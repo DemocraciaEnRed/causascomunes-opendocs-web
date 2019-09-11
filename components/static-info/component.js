@@ -6,6 +6,7 @@ import { download } from 'react-icons-kit/feather/download'
 import StaticInfoWrapper from '../../elements/static-info-wrapper/component'
 import StaticInfoNav from '../../elements/static-info-nav/component'
 import StaticInfoButton from '../../elements/static-info-button/component'
+//páginas de info
 import ComoParticipar from '../como-participar/component'
 import FAQ from '../faq/component'
 import SobreLaPlataforma from '../sobre-la-plataforma/component'
@@ -22,10 +23,10 @@ const buttons = [
     'name': 'Cómo participar',
     'value': 'como-participar'
   },
-  /*{
+  {
     'name': 'Preguntas frecuentes',
     'value': 'faq'
-  },*/
+  },
   {
     'name': 'Terminos y condiciones',
     'value': 'terms-y-conds-nuevo'
@@ -39,7 +40,7 @@ const buttons = [
 const content = {
   'como-participar': <ComoParticipar />,
   'acerca-de': <SobreLaPlataforma />,
-  //'faq': <FAQ />,
+  'faq': <FAQ />,
   'terms-y-conds-nuevo': <TermsYConds />,
   'contacto': <Contacto />
 }

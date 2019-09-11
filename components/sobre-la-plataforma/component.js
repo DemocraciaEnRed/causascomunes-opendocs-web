@@ -13,29 +13,35 @@ export default () => (
     <StaticInfoTitle>Acerca de</StaticInfoTitle>
     <StyledDiv>
       <StaticInfoBold>
-        ¿Qué es?
+        ¿Qué es Causas Comunes?
       </StaticInfoBold>
       <StaticInfoP>
-        <strong>El Portal de Leyes Abiertas</strong> es una <strong>plataforma de elaboración colaborativa de normas</strong> donde los diputados ponen a disposición de la ciudadanía sus propuestas y proyectos de ley para incorporar nuevos puntos de vista a sus iniciativas. El objetivo de la plataforma es enriquecer las propuestas de ley y generar un nuevo espacio de comunicación con los ciudadanos, que permita enriquecer el debate parlamentario.
+        Somos personas preocupadas por la la ausencia de políticas públicas. Venimos construyendo alternativas, movilizándonos, encontrándonos en las calles, en las redes, desde diversos espacios y territorios. Tenemos ideas, tenemos propuestas y buscamos que tengan impacto real.
+      </StaticInfoP>
+      <StaticInfoP>
+        Queremos usar el espacio electoral para aportar al debate; las Elecciones no pueden ser “ir a votar y nada más”. Queremos contribuir con soluciones concretas, con perspectivas amplias, inclusivas y diversas, porque no estamos dispuestos/as a seguir postergando cuestiones que necesitan ser resueltas hoy.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
       <StaticInfoBold>
-        ¿Por qué participar?
+        ¿Qué es “Propuestas.CausasComunes”?
       </StaticInfoBold>
       <StaticInfoP>
-      Según la Constitución <strong>la redacción y discusión de la ley debe darse en el ámbito del Congreso</strong>.
+      Desde Causas Comunes queremos comprometer a lxs candidatxs en temas puntuales de las agendas de género, vivienda, trabajo, ambiente, drogas y transparencia.
       </StaticInfoP>
       <StaticInfoP>
-      Esta herramienta nace del enfoque de parlamento abierto, el cual promueve la incorporación de los ciudadanos en los procesos de toma de decisiones públicas.
+      “Propuestas.CausasComunes” es una plataforma de elaboración colaborativa de propuestas. Invitamos a lxs candidatxs, a las organizaciones de la sociedad civil organizada, a la academia y a la ciudadanía en general a usarla para co-crear propuestas de ley concretas y así generar un nuevo espacio que permita enriquecer el debate público.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
       <StaticInfoBold>
-        ¿Qué es la co-creación de propuestas de ley?
+        ¿Qué es la co-creación de propuestas?
       </StaticInfoBold>
       <StaticInfoP>
-        <strong>La co-creación de propuestas de ley rompe con la forma tradicional de legislar</strong> donde un equipo de políticos, profesionales y técnicos elaboran los proyectos de ley. <strong>Co-crear supone abrir y federalizar ese proceso y crear un espacio en el que se encuentran legisladores con la ciudadanía</strong>, la academia, las organizaciones de la sociedad civil y personas especializadas en las temáticas que se están discutiendo.
+        La co-creación de propuestas de ley rompe con la forma tradicional de legislar en la que un equipo de políticos profesionales y técnicos elaboran los proyectos de ley. Co-crear supone abrir y federalizar ese proceso.
+      </StaticInfoP>
+      <StaticInfoP>
+        “Propuestas.CausasComunes” es un espacio en el que la sociedad civil organizada, la academia y personas especializadas en diversas temáticas pueden incorporar sus puntos de vista a iniciativas concretas para que, con sus aportes, creemos colectivamente alternativas de políticas públicas que sean valientes y sean posibles.
       </StaticInfoP>
     </StyledDiv>
   </section>
