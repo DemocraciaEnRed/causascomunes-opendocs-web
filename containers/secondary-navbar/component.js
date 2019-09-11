@@ -148,7 +148,8 @@ class SecondaryNavbar extends Component {
             </NavbarDropdownContent>
           </NavbarDropdown>
           {links.map((li, i) => {
-            return this.props.isLanding
+            //return this.props.isLanding
+            return false
               ? <LandingLink
                 key={i}
                 name={li.name}
