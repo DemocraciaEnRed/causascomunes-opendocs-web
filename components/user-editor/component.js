@@ -31,12 +31,12 @@ const StyledEditorWrapper = styled.div`
     @media (max-width: 700px) {
       max-width:100%;
     }
-    span {
-      font-size: 1.8rem;
-      line-height: 1.89;
-      color: #203340;
-      padding: 6.5px 0px;
-    }
+    // span {
+    //   font-size: 1.8rem;
+    //   line-height: 1.89;
+    //   color: #203340;
+    //   padding: 6.5px 0px;
+    // }
   }
 `
 
