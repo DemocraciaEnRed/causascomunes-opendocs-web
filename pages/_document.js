@@ -169,7 +169,7 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="https://propuestas.causascomunes.org/static/assets/fb-banner.png"/>
           <meta property="og:image:secure_url" content="https://propuestas.causascomunes.org/static/assets/fb-banner.png" />
           <meta property="og:title" content="Portal de Propuestas - Causas Comunes" />
-          <meta property="og:description" content="Propuestas para el proyecto Causas Comunes" />  
+          <meta property="og:description" content="Propuestas de Causas Comunes" />  
 
           {this.props.styleTags}
           {
