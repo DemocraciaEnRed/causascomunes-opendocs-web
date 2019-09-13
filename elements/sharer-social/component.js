@@ -23,7 +23,7 @@ const SocialSpan = styled.span`
   text-align: center;
   `
 export default ({ id }) => {
-  const socialLinksUrl = (window.location.origin + '/propuesta?id=' + id)
+  const socialLinksUrl = (window.location.origin + '/articulado?id=' + id)
   const twitterText = encodeURIComponent('Una de las propuestas de Causas Comunes')
   const twitterHashtag = encodeURIComponent('CausasComunes')
   const twitterLink = 'https://twitter.com/intent/tweet?url='+socialLinksUrl+'&text='+twitterText+'&via=causas_comunes&lang=es'
