@@ -170,6 +170,10 @@ export default class MyDocument extends Document {
           <meta property="og:image:secure_url" content="https://propuestas.causascomunes.org/static/assets/fb-banner.png" />
           <meta property="og:title" content="Portal de Propuestas - Causas Comunes" />
           <meta property="og:description" content="Propuestas de Causas Comunes" />  
+          <link rel='apple-touch-icon' sizes='180x180' href='/static/apple-touch-icon.png' />
+          <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon-32x32.png' />
+          <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon-16x16.png' />
+          <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon.ico' /> 
 
           {this.props.styleTags}
           {
