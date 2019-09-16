@@ -43,15 +43,15 @@ const NavbarDropdownContent = styled.ul`
     > li {
       color: var(--color-azul-principal);
       display: block;
-      padding: 10px 20px;
       font-size: 1.6rem;
       text-transform: uppercase;
-      padding: 12px 16px;
       &:hover, &:focus, &:active {
         background-color: var(--color-azul-principal);
         color: #f6f6f6;
       }
       a {
+        padding: 10px 20px;
+        padding: 12px 16px;
         display: block;
       }
     }
@@ -139,7 +139,7 @@ class SecondaryNavbar extends Component {
             </span>
             <NavbarDropdownContent>
               {causas.map((causa, i) => (
-                <li key={i}><Link href={causa.link}>{causa.name}</Link></li>
+                <li key={i} onClick={this.toggleDropdown}><Link href={causa.link}>{causa.name}</Link></li>
               ))}
             </NavbarDropdownContent>
           </NavbarDropdown>
