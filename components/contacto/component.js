@@ -12,14 +12,15 @@ export default () => (
     <StaticInfoTitle>Contacto</StaticInfoTitle>
     <StyledDiv>
       <StaticInfoP>
-      Programa de Modernización Parlamentaria, Innovación, Transparencia y Fortalecimiento Democrático.
+        Nos podés encontrar en las siguientes redes:<br />
+        <u><a rel='noopener noreferrer' target='_blank' href='https://twitter.com/causas_comunes'>twitter.com/causas_comunes</a></u><br />
+        <u><a rel='noopener noreferrer' target='_blank' href='https://instagram.com/causascomunes'>instagram.com/causascomunes</a></u><br />
+        <u><a rel='noopener noreferrer' target='_blank' href='https://facebook.com/Causas-Comunes-449280685874685'>facebook.com/Causas-Comunes</a></u><br />
       </StaticInfoP>
       <StaticInfoP>
-        <a href='mailto:leyesabiertas@hcdn.gob.ar'>leyesabiertas@hcdn.gob.ar</a>.
-      </StaticInfoP>
-      <StaticInfoP>
-        (+5411) 4127-7100 int. 5091
+        O escribirnos a <u><a rel='noopener noreferrer' target='_blank' href='mailto:causascomunesx@gmail.com'>causascomunesx@gmail.com</a></u>
       </StaticInfoP>
     </StyledDiv>
   </section>
 )
+
