@@ -15,19 +15,12 @@ text-align:left;
 margin-bottom:2rem;
 min-width:150px;
 `
-const userData = {
-  'Forrest Gump': { url: 'http://duckduckgo.com', img: 'user-1.png'}
-}
-const orgasPorProyectId = {
-  '5d2ddec1a22da9271f3a428a': { url: 'http://duckduckgo.com', img: 'user-1.png'}
-}
-
 const Avatar = styled.div`
   width: 40px;
   min-width:40px;
   height: 40px;
-  border-radius:50%;${'/static/assets/cc-logo-color.png'});
-  background-image: url('${(props) => props.userId && orgasPorProyectId[props.proyectId] ? `/static/assets/users-imgs/${orgasPorProyectId[props.proyectId].img}` : '/static/assets/userdefault.png'}');
+  border-radius:50%;
+  background-image: url('${(props) => props.userId ? `${API_URL}/api/v1/users/${props.userId}/avatar` : '/static/assets/userdefault.png'}');
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -59,15 +52,16 @@ justify-content:space-between;
 const IconWrapper = styled.div`
   padding-right:.5rem;`
 
-const UserAvatar = ({ userId, name, party, badge, proyectId }) => (
+ 
+const UserAvatar = ({ userId, name, party, badge }) => (
   <Wrapper>
-    <a href={ orgasPorProyectId[proyectId] ? orgasPorProyectId[proyectId].url : '' }>
-      <Avatar userId={userId} proyectId={proyectId} />
-    </a>
+    <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
+      <Avatar userId={userId} />
+    </Link>
     <TextWrapper>
-      <a href={ orgasPorProyectId[proyectId] ? orgasPorProyectId[proyectId].url : '' }>
+      <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
         <Name>{name}</Name>
-      </a>
+      </Link>
       <Party>
         { badge && <IconWrapper><Icon icon={checkCircle} /></IconWrapper>}
         <p>{party}</p>
@@ -81,8 +75,7 @@ UserAvatar.propTypes = {
   userId: PropTypes.string,
   party: PropTypes.string,
   authorId: PropTypes.string,
-  badge: PropTypes.string,
-  proyectId: PropTypes.string
+  badge: PropTypes.string
 }
 
 export default UserAvatar
