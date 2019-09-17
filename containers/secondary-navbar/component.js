@@ -139,7 +139,7 @@ class SecondaryNavbar extends Component {
             </span>
             <NavbarDropdownContent>
               {causas.map((causa, i) => (
-                <li key={i} onClick={this.toggleDropdown}><Link href={causa.link}>{causa.name}</Link></li>
+                <li key={i} onClick={this.toggleDropdown}><a href={causa.link}>{causa.name}</a></li>
               ))}
             </NavbarDropdownContent>
           </NavbarDropdown>
