@@ -38,7 +38,7 @@ export default () => (
       <StaticInfoP>
         Lxs usuarixs cuyos aportes fueran incorporados, serán consideradxs colaboradores en la redacción de la propuesta.
       </StaticInfoP>
-      <StaticInfoP>Para más detalles sobre las funcionalidades básicas de esta plataforma descargue/consulte el <Icon icon={download} size={16} /> <Link href='/static/files/X_manual_de_usuario.pdf'><ManualLink>Manual de usuario</ManualLink></Link></StaticInfoP>
+      <StaticInfoP>Para más detalles sobre las funcionalidades básicas de esta plataforma descargue/consulte el <Icon icon={download} size={16} /> <Link href='/static/files/Causas Comues _ Manual de Usuario.pdf'><ManualLink>Manual de usuario</ManualLink></Link></StaticInfoP>
     </ComoParticiparWrapper>
   </section>
 )
