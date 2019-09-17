@@ -73,27 +73,27 @@ const links = [
 const causas = [
   {
     name: 'Trabajo',
-    link: 'https://propuestas.causascomunes.org/articulado?id=5d7a9b11ee136700188ea5c0',
+    link: '/articulado?id=5d7a9b11ee136700188ea5c0',
   },
   {
     name: 'Ambiente',
-    link: 'https://propuestas.causascomunes.org/articulado?id=5d7a9b68ee136700188ea5c2',
+    link: '/articulado?id=5d7a9b68ee136700188ea5c2',
   },
   {
     name: 'Género',
-    link: 'https://propuestas.causascomunes.org/articulado?id=5d7a9c23ee136700188ea5c6',
+    link: '/articulado?id=5d7a9c23ee136700188ea5c6',
   },
   {
     name: 'Vivienda',
-    link: 'https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be',
+    link: '/articulado?id=5d7a9a8aee136700188ea5be',
   },
   {
     name: 'Drogas',
-    link: 'https://propuestas.causascomunes.org/articulado?id=5d7a9bc8ee136700188ea5c4',
+    link: '/articulado?id=5d7a9bc8ee136700188ea5c4',
   },
   {
     name: 'Transparencia',
-    link: 'https://propuestas.causascomunes.org/articulado?id=5d78f015ee136700188ea5bc',
+    link: '/articulado?id=5d78f015ee136700188ea5bc',
   }
 ]
 
