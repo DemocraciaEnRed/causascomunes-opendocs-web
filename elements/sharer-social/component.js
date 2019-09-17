@@ -25,17 +25,17 @@ const SocialSpan = styled.span`
 
 const short_links = {
   //trabajo
-  '5d7a9b11ee136700188ea5c0': 'https://tinyurl.com/y6p5q5x2',
+  '5d7a9b11ee136700188ea5c0': 'https://tinyurl.com/causa-trabajo',
   //ambiente
-  '5d7a9b68ee136700188ea5c2': 'https://tinyurl.com/y4veyr8g',
+  '5d7a9b68ee136700188ea5c2': 'https://tinyurl.com/causa-ambiente',
   //genero
-  '5d7a9c23ee136700188ea5c6': 'https://tinyurl.com/y4fc6qjj',
+  '5d7a9c23ee136700188ea5c6': 'https://tinyurl.com/causa-genero',
   //vivienda
-  '5d7a9a8aee136700188ea5be': 'https://tinyurl.com/y56jgsrw',
+  '5d7a9a8aee136700188ea5be': 'https://tinyurl.com/causa-vivienda',
   //drogas
-  '5d7a9bc8ee136700188ea5c4': 'https://tinyurl.com/y5cu5uf4',
+  '5d7a9bc8ee136700188ea5c4': 'https://tinyurl.com/causa-drogas',
   //transparencia
-  '5d78f015ee136700188ea5bc': 'https://tinyurl.com/y5vwnpqn'
+  '5d78f015ee136700188ea5bc': 'https://tinyurl.com/causa-transparencia'
 };
 
 export default ({ id }) => {
