@@ -32,8 +32,6 @@ const Card = ({ project }) => (
           userId={project.author._id}
           name={project.author.fullname}
           party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''} />
-        <CardSocial commentaries={project.commentsCount}
-          closed={project.closed} />
       </CardContainer>
     </a>
   </Link>
