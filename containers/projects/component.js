@@ -145,7 +145,7 @@ class Projects extends Component {
     return (
       <Section id='projects'>
         <TitleH2>Propuestas para Causas Comunes.</TitleH2>
-        <SubtitleH3>Estas son las propuestas disponibles para leer, comentar y hacer aportes . ¡Ayude a mejorarlas!</SubtitleH3>
+        <SubtitleH3>Estas son las propuestas disponibles para leer, comentar y hacer aportes . ¡Ayudá a mejorarlas!</SubtitleH3>
         <Options>
           <OptionLabel>Ordenar</OptionLabel>
           {query.created === 'ASC' && <OptionChoice onClick={() => this.toggleSort('created', 'DESC')}>Fecha de creación <b>ASC</b></OptionChoice>}
