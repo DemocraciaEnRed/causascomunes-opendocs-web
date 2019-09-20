@@ -146,15 +146,6 @@ class Projects extends Component {
       <Section id='projects'>
         <TitleH2>Propuestas para Causas Comunes.</TitleH2>
         <SubtitleH3>Estas son las propuestas disponibles para leer, comentar y hacer aportes . ¡Ayudá a mejorarlas!</SubtitleH3>
-        <Options>
-          <OptionLabel>Ordenar</OptionLabel>
-          {query.created === 'ASC' && <OptionChoice onClick={() => this.toggleSort('created', 'DESC')}>Fecha de creación <b>ASC</b></OptionChoice>}
-          {query.created === 'DESC' && <OptionChoice onClick={() => this.toggleSort('created', 'ASC')}>Fecha de creación <b>DESC</b></OptionChoice>}
-          <OptionLabel>Filtrar</OptionLabel>
-          {filter.closed === null && <OptionChoice className='disabled' onClick={() => this.toggleFilter('closed', true)}>Aportes</OptionChoice>}
-          {filter.closed === true && <OptionChoice onClick={() => this.toggleFilter('closed', false)}>Aportes <b>FINALIZADOS</b></OptionChoice>}
-          {filter.closed === false && <OptionChoice onClick={() => this.toggleFilter('closed', null)}>Aportes <b>ABIERTOS</b></OptionChoice>}
-        </Options>
         {projectsFiltered &&
           <Fragment>
             <Grid>
