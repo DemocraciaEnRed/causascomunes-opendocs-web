@@ -16,6 +16,12 @@ const ManualLink = styled.span`
   }
 `
 
+const imgStyle = {
+  width:'100%',
+  border:'solid 1px #dae1e7',
+  borderRadius:'7px'
+}
+
 export default () => (
   <section>
     <StaticInfoTitle>Cómo participar</StaticInfoTitle>
@@ -35,6 +41,7 @@ export default () => (
       <StaticInfoP>
         Un aporte se hace seleccionando una parte específica del texto que llame tu atención. Una vez seleccionada, podrás hacer una sugerencia, una crítica o un complemento al texto que has seleccionado. 
       </StaticInfoP>
+      <a href="/static/assets/tutoProps.png" target="_blank"><img style={imgStyle} src="/static/assets/tutoProps.png" /></a>
       <StaticInfoP>
         Lxs usuarixs cuyos aportes fueran incorporados, serán consideradxs colaboradores en la redacción de la propuesta.
       </StaticInfoP>
