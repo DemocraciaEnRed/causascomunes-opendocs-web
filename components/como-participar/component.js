@@ -41,11 +41,11 @@ export default () => (
       <StaticInfoP>
         Un aporte se hace seleccionando una parte específica del texto que llame tu atención. Una vez seleccionada, podrás hacer una sugerencia, una crítica o un complemento al texto que has seleccionado. 
       </StaticInfoP>
-      <a href="/static/assets/tutoProps.png" target="_blank"><img style={imgStyle} src="/static/assets/tutoProps.png" /></a>
+      <a href="/static/assets/tutoProps.png" rel='noopener noreferrer' target='_blank'><img style={imgStyle} src="/static/assets/tutoProps.png" /></a>
       <StaticInfoP>
         Lxs usuarixs cuyos aportes fueran incorporados, serán consideradxs colaboradores en la redacción de la propuesta.
       </StaticInfoP>
-      <StaticInfoP>Para más detalles sobre las funcionalidades básicas de esta plataforma descargue/consulte el <Icon icon={download} size={16} /> <Link href='/static/files/Causas Comues _ Manual de Usuario.pdf'><ManualLink>Manual de usuario</ManualLink></Link></StaticInfoP>
+      <StaticInfoP>Para más detalles sobre las funcionalidades básicas de esta plataforma descargue/consulte el <Icon icon={download} size={16} /> <a rel='noopener noreferrer' target='_blank' href='/static/files/Causas Comues _ Manual de Usuario.pdf'><ManualLink>Manual de usuario</ManualLink></a></StaticInfoP>
     </ComoParticiparWrapper>
   </section>
 )
