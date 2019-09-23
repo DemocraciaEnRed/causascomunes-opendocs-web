@@ -30,7 +30,7 @@ export default () => (
       Desde Causas Comunes queremos comprometer a lxs candidatxs en temas puntuales de las agendas de género, vivienda, trabajo, ambiente, drogas y transparencia.
       </StaticInfoP>
       <StaticInfoP>
-      “Propuestas.CausasComunes” es una plataforma de elaboración colaborativa de propuestas. Invitamos a lxs candidatxs, a las organizaciones de la sociedad civil organizada, a la academia y a la ciudadanía en general a usarla para co-crear propuestas de ley concretas y así generar un nuevo espacio que permita enriquecer el debate público.
+      “Propuestas.CausasComunes” es una plataforma de elaboración colaborativa de propuestas de ley. Invitamos a lxs candidatxs, a las organizaciones de la sociedad civil organizada, a la academia y a la ciudadanía en general a usarla para co-crear propuestas de ley concretas y así generar un nuevo espacio que permita enriquecer el debate público.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
