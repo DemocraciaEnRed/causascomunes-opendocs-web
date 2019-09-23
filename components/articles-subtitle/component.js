@@ -9,7 +9,7 @@ const ArticlesSubtitle = ({ authenticated, editMode }) => (
       { editMode ? 'Puede editar el texto y marcar comentarios como aportes.'
         : 'Puede comentar haciendo selección sobre el fragmento de texto deseado.' }
     </Subtitle>
-    : <FundationAlertLogin articles />
+    : null
 )
 
 ArticlesSubtitle.propTypes = {
