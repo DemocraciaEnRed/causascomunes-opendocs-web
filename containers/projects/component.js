@@ -144,8 +144,8 @@ class Projects extends Component {
     } = this.state
     return (
       <Section id='projects'>
-        <TitleH2>Propuestas para Causas Comunes.</TitleH2>
-        <SubtitleH3>Estas son las propuestas disponibles para leer, comentar y hacer aportes . ¡Ayudá a mejorarlas!</SubtitleH3>
+        <TitleH2>Propuestas de ley.</TitleH2>
+        <SubtitleH3>Estas son las propuestas que vamos a presentarles a todxs lxs candidatxs. Están disponibles para leer, comentar y para hacer aportes. ¡Ayudá a mejorarlas!</SubtitleH3>
         {projectsFiltered &&
           <Fragment>
             <Grid>
