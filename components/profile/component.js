@@ -28,8 +28,10 @@ const ButtonLink = styled.button`
 
 const genderOptions = [
   { 'name': '', 'value': '' },
-  { 'name': 'Masculino', 'value': 'Masculino' },
-  { 'name': 'Femenino', 'value': 'Femenino' },
+  { 'name': 'Varón', 'value': 'Varón' },
+  { 'name': 'Mujer', 'value': 'Mujer' },
+  { 'name': 'Varón trans', 'value': 'Varón trans' },
+  { 'name': 'Mujer trans', 'value': 'Mujer trans' },
   { 'name': 'Otro', 'value': 'Otro' },
   { 'name': 'Prefiero no especificar', 'value': 'Prefiero no especificar' }
 ]
