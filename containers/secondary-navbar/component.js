@@ -9,15 +9,19 @@ import Icon from 'react-icons-kit'
 import { chevronDown } from 'react-icons-kit/fa/chevronDown'
 
 const SecondaryBar = styled.div`
-  height:4rem;
   display: flex;
   justify-content:space-between;
   margin-bottom: 2rem;
   padding-left:5%;
   padding-right:5%;
   padding-top:2rem;
-  @media(max-width:700px){
-    height:5rem;
+  /* estás consideraciones vienen del wrapeo de "portal de propuestas de leyes" */
+  height:7rem;
+  @media(min-width:424px){
+    height:6rem;
+  }
+  @media(min-width:554px){
+    height:4rem;
   }
 `
 
