@@ -18,6 +18,7 @@ let Keycloak
 export default class extends Component {
   state = {
     keycloak: null,
+    authenticating: true,
     authenticated: false,
     login: null,
     isAuthor: null,
@@ -92,6 +93,9 @@ export default class extends Component {
         authenticated: false
       })
     }
+    this.setState({
+      authenticating: false
+    })
   }
 
   render () {

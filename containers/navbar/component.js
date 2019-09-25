@@ -38,6 +38,7 @@ class NavBar extends Component {
         showTooltip: true
       })
     }
+    
   }
 
   handleMenu = () => {
@@ -46,26 +47,31 @@ class NavBar extends Component {
     })
   }
 
-  render () {
+  render () {LoggedUserBar
     if (!this.props.authContext) return null
     return (
       <StyledNav>
         <BetaLabel />
         <NavbarLogo />
-        {this.props.authContext.authenticated
+        {this.props.authContext.authenticating 
           ? (
-            <LoggedUserBar>
-              <LoggedUser onClick={this.handleMenu} user={this.props.authContext.user} />
-              {this.state.menu &&
-              <UserMenu logout={this.props.authContext.logout} user={this.props.authContext.user} create={this.createProject} isAuthor={this.props.authContext.isAuthor} />
-              }
-            </LoggedUserBar>
-          ) : (
-            <UserBar>
-              <Button onClick={this.props.authContext.login}>Iniciar sesión</Button>
-              <Button primary onClick={this.props.authContext.register}>Registrarse</Button>
-            </UserBar>
-          )}
+            <UserBar ></UserBar>
+         ) : (
+           this.props.authContext.authenticated
+            ? (
+              <LoggedUserBar>
+                <LoggedUser onClick={this.handleMenu} user={this.props.authContext.user} />
+                {this.state.menu &&
+                <UserMenu logout={this.props.authContext.logout} user={this.props.authContext.user} create={this.createProject} isAuthor={this.props.authContext.isAuthor} />
+                }
+              </LoggedUserBar>
+            ) : (
+              <UserBar >
+                <Button onClick={this.props.authContext.login}>Iniciar sesión</Button>
+                <Button primary onClick={this.props.authContext.register}>Registrarse</Button>
+              </UserBar>
+            )
+        )}
       </StyledNav>
     )
   }
