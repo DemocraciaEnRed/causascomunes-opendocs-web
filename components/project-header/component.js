@@ -74,7 +74,7 @@ const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, to
             limitDate={project.currentVersion.content.closingDate} />
           : <ClosingDate date={project.currentVersion.content.closingDate} />
         }
-        <SharerSocial id={project._id} />
+        <SharerSocial id={project._id} title={project.currentVersion.content.title} />
         <ProjectEditMode />
         {isAuthor &&
         <TogglePublish project={project} isPublished={isPublished} setPublish={setPublish} togglePublish={togglePublish} />

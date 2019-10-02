@@ -38,10 +38,10 @@ const short_links = {
   '5d78f015ee136700188ea5bc': 'https://tinyurl.com/causa-transparencia'
 };
 
-export default ({ id }) => {
+export default ({ id, title }) => {
   const socialLinksUrl = (window.location.origin + '/articulado?id=' + id)
   const socialShortLinksUrl = short_links[id]
-  const twitterText = encodeURIComponent('Una de las propuestas de Causas Comunes')
+  const twitterText = encodeURIComponent('Sumate al proyecto "'+title+'" que impulsamos desde Causas comunes')
   const twitterHashtag = encodeURIComponent('CausasComunes')
   const twitterLink = 'https://twitter.com/intent/tweet?url='+socialShortLinksUrl+'&text='+twitterText+'&via=causas_comunes&lang=es'
 
