@@ -14,8 +14,7 @@ const FooterWrapper = styled.footer`
 `
 var imgLuminateStyle = {
   verticalAlign: 'middle',
-  width: '100px',
-  height: '46px'
+  height: '38px'
 };
 
 
