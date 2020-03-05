@@ -50,7 +50,7 @@ color: #2c4c61;
 }
 `
 const Options = styled.div`
-  
+
 `
 const OptionLabel = styled.div`
 font-size: 1.4rem;
@@ -145,7 +145,7 @@ class Projects extends Component {
     return (
       <Section id='projects'>
         <TitleH2>Propuestas de ley.</TitleH2>
-        <SubtitleH3>Estas son las propuestas que vamos a presentarles a todxs lxs candidatxs. Están disponibles para leer, comentar y para hacer aportes. ¡Ayudá a mejorarlas!</SubtitleH3>
+        <SubtitleH3>Conocé las propuestas de ley que elaboramos de manera participativa y colaborativa. ¡Ayudanos a mejorarlas con tus comentarios y aportes sobre cada causa!</SubtitleH3>
         {projectsFiltered &&
           <Fragment>
             <Grid>
