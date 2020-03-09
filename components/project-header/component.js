@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import styled from 'styled-components'
 import ProjectHeaderWrapper from '../../elements/project-header-wrapper/component'
-import UserAvatar from '../../elements/user-avatar/component'
+import CausaAvatar from '../../elements/causa-avatar/component'
 import ProjectVersionData from '../../components/project-version-data/component'
 import FundationTitle from '../../components/fundation-title/component'
 import ProjectTitle from '../../elements/project-title/component'
@@ -60,12 +60,7 @@ const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, to
   <ProjectHeaderContainer img={project.currentVersion.content.imageCover}>
     <ProjectHeaderWrapper>
       <TopBarWrapper>
-        <UserAvatar headerbar
-          proyectId={project._id}
-          authorId={project.author._id}
-          userId={project.author._id}
-          name={project.author.fullname}
-          party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''} />
+        <CausaAvatar projectId={project._id} />
         <ProjectVersionData
           version={project.currentVersion.version}
           createdAt={project.currentVersion.createdAt} />
