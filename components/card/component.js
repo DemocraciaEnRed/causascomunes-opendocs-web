@@ -31,7 +31,8 @@ const Card = ({ project }) => (
           authorId={project.author._id}
           userId={project.author._id}
           name={project.author.fullname}
-          party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''} />
+          party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''}
+          projectId={project.id} />
       </CardContainer>
     </a>
   </Link>

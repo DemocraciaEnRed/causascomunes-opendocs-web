@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import UserAvatar from '../user-avatar/component'
+import CausaAvatar from '../causa-avatar/component'
 
 const Wrapper = styled.div`
   width:320px;
@@ -35,7 +35,7 @@ const TextWrapper = styled.div`
 
 const croppedTitle = (title) => title.slice(0, 42).concat('...')
 
-const CardContent = ({ authorId, tagTitle, title, userId, name, party }) => (
+const CardContent = ({ authorId, tagTitle, title, userId, name, party, projectId }) => (
   <Wrapper>
     <TextWrapper>
       { tagTitle &&
@@ -43,11 +43,7 @@ const CardContent = ({ authorId, tagTitle, title, userId, name, party }) => (
       }
       <Title>{title} </Title>
     </TextWrapper>
-    <UserAvatar
-      userId={userId}
-      name={name}
-      party={party}
-      authorId={authorId} />
+    <CausaAvatar projectId={projectId} />
   </Wrapper>
 )
 
@@ -57,7 +53,8 @@ CardContent.propTypes = {
   userId: PropTypes.string,
   name: PropTypes.string.isRequired,
   party: PropTypes.string.isRequired,
-  authorId: PropTypes.string.isRequired
+  authorId: PropTypes.string.isRequired,
+  projectId: PropTypes.string.isRequired
 }
 
 export default CardContent
