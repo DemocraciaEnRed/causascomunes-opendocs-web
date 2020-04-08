@@ -18,7 +18,7 @@ const CardContainer = styled.div`
   background: #fff;
   box-sizing: border-box;
   cursor: pointer;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 `
 
 const baseImgDir = '/static/assets/images-banners-propuestas'
