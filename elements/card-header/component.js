@@ -3,15 +3,16 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Icon from 'react-icons-kit/Icon'
 import { eyeSlash } from 'react-icons-kit/fa/eyeSlash'
+
 const Wrapper = styled.div`
-width: 368px;
-height: 126px;
-background-color: #1b95ba;
-background-image: url('${(props) => props.img}');
-overflow:hidden;
-background-size: cover;
-background-position: center;
-// position: relative;
+  width: 368px;
+  height: 226px;
+  background-color: #1b95ba;
+  background-image: url('${(props) => props.img}');
+  overflow:hidden;
+  background-size: contain;
+  background-position: center;
+  // position: relative;
 `
 
 const Label = styled.span`

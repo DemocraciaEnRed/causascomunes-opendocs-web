@@ -10,16 +10,16 @@ const Wrapper = styled.div`
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  height:177px;
+  height:157px;
   padding:12px;
   box-sizing: border-box;
 `
 const TagTitle = styled.div`
-font-size:1.2rem;
-text-transform:uppercase;
-text-align:left;
-color:#5c97bc;
-padding-bottom:1rem;
+  font-size:1.2rem;
+  text-transform:uppercase;
+  text-align:left;
+  color:#5c97bc;
+  padding-bottom:1rem;
 `
 
 const Title = styled.div`
@@ -27,7 +27,7 @@ const Title = styled.div`
   color:#000;
   text-align:left;
   font-family: var(--bold);
-  padding-bottom:2rem;
+  padding-bottom:1rem;
 `
 
 const TextWrapper = styled.div`
