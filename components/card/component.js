@@ -29,25 +29,25 @@ const CardContainer = styled.div`
 `
 
 const baseImgDir = '/static/assets/images-banners-propuestas'
-const causasImgs = {
-  // ambiente
-  '5d7a9b68ee136700188ea5c2': `${baseImgDir}/banner-ambiente.jpg`,
-  // drogas
-  '5d8a2a8cee136700188ea5e8': `${baseImgDir}/banner-drogas.jpg`,
-  // genero
-  '5d7a9c23ee136700188ea5c6': `${baseImgDir}/banner-genero.jpg`,
-  // trabajo
-  '5d7a9b11ee136700188ea5c0': `${baseImgDir}/banner-trabajo.jpg`,
-  // transparencia
-  '5d78f015ee136700188ea5bc': `${baseImgDir}/banner-transparencia.jpg`,
-  // vivienda
-  '5d7a9a8aee136700188ea5be': `${baseImgDir}/banner-vivienda.jpg`,
-}
+// const causasImgs = {
+//   // ambiente
+//   '5d7a9b68ee136700188ea5c2': `${baseImgDir}/banner-ambiente.jpg`,
+//   // drogas
+//   '5d8a2a8cee136700188ea5e8': `${baseImgDir}/banner-drogas.jpg`,
+//   // genero
+//   '5d7a9c23ee136700188ea5c6': `${baseImgDir}/banner-genero.jpg`,
+//   // trabajo
+//   '5d7a9b11ee136700188ea5c0': `${baseImgDir}/banner-trabajo.jpg`,
+//   // transparencia
+//   '5d78f015ee136700188ea5bc': `${baseImgDir}/banner-transparencia.jpg`,
+//   // vivienda
+//   '5d7a9a8aee136700188ea5be': `${baseImgDir}/banner-vivienda.jpg`,
+// }
 
 const Card = ({ project }) => (
   <Link href={{ pathname: '/propuesta', query: { id: project._id } }}>
     <CardContainer>
-      <CardHeader hasImage={!!project.currentVersion.content.imageCover} img={ project.id in causasImgs ? causasImgs[project.id] : project.currentVersion.content.imageCover } published={project.published} />
+      <CardHeader hasImage={!!project.currentVersion.content.imageCover} img={project.currentVersion.content.imageCover ? project.currentVersion.content.imageCover : null } published={project.published} />
       <CardContent
         title={project.currentVersion.content.title}
         authorId={project.author._id}

@@ -31,6 +31,7 @@ const Title = styled.div`
 `
 
 const TextWrapper = styled.div`
+//z-index: 100;
 `
 
 const croppedTitle = (title) => title.slice(0, 42).concat('...')

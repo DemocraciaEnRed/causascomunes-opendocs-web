@@ -6,7 +6,8 @@ import Icon from 'react-icons-kit'
 import { checkSquareO } from 'react-icons-kit/fa/checkSquareO'
 import { squareO } from 'react-icons-kit/fa/squareO'
 import ProjectHeaderWrapper from '../../elements/project-header-wrapper/component'
-import CausaAvatar from '../../elements/causa-avatar/component'
+// import CausaAvatar from '../../elements/causa-avatar/component'
+import UserAvatar from '../../elements/user-avatar/component'
 import ProjectVersionData from '../../components/project-version-data/component'
 import FundationTitle from '../../components/fundation-title/component'
 import ProjectTitle from '../../elements/project-title/component'
@@ -70,7 +71,12 @@ const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, to
       section={section} />
     <ProjectHeaderWrapper>
       <TopBarWrapper>
-        <CausaAvatar projectId={project._id} />
+        <UserAvatar headerbar
+          proyectId={project._id}
+          authorId={project.author._id}
+          userId={project.author._id}
+          name={project.author.fullname}
+          party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''} />
         <ProjectVersionData
           version={project.currentVersion.version}
           createdAt={project.currentVersion.createdAt} />

@@ -12,7 +12,7 @@ background-image: url('${(props) => props.img}');
 overflow:hidden;
 background-size: cover;
 background-position: center;
-position: relative;
+//position: relative;
 `
 
 const CoverImage = styled.img`
