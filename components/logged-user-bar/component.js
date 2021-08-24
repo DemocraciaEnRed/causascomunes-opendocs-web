@@ -15,12 +15,12 @@ opacity: ${(props) => props.opacity};
 class LoggedUserBar extends Component {
   constructor (props) {
     super(props)    
-    this.state = { opacity: '0' }
+    this.state = { opacity: '1' }
   }
   
   componentDidMount () {
     // la idea de esto es que no aparezca la barra de usuario sin estar antes autenticado
-    setTimeout(() => { this.setState({opacity: '1'}) }, 500)
+    //setTimeout(() => { this.setState({opacity: '1'}) }, 500)
   }
     
   render () {

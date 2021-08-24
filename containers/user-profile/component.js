@@ -21,13 +21,13 @@ class UserProfile extends Component {
     alertStatus: null
   }
 
-  async componentDidMount () {
+  async componentDidMount() {
     if (!this.props.authContext.keycloak) return
     // this.fetchUser(this.props.authContext.keycloak.token)
     this.fetchUser(this.props.authContext.authenticated, this.props.authContext.keycloak.token)
   }
 
-  async componentWillUpdate (props) {
+  async componentWillUpdate(props) {
     if (!props.authContext.keycloak) return
     if (props === this.props) return
     this.fetchUser(props.authContext.authenticated, props.authContext.keycloak.token)
@@ -76,8 +76,11 @@ class UserProfile extends Component {
         user = await (await fetch(`${API_URL}/api/v1/users/me`, {
           'headers': {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + token
-          }
+            'Authorization': 'Bearer ' + token,
+            'Pragma': 'no-cache',
+            'Cache-Control': 'no-cache'
+          },
+          cache: 'no-store'
         })).json()
         isOwner = true
       }

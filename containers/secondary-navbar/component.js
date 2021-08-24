@@ -111,7 +111,9 @@ const LandingLink = ({ name, value }) => (
 
 const NavbarLink = ({ name, link }) => (
   <Link href={link}>
+    <a>
     {name}
+    </a>
   </Link>
 )
 

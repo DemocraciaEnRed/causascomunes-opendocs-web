@@ -77,7 +77,7 @@ const Usermenu = ({ logout }) => (
 
   <StyledUl>
     <Li>
-      <Link href={{ pathname: '/userprofile' }}>
+      <Link href='/userprofile'>
         <StyledA>Mi perfil</StyledA>
       </Link>
     </Li>
