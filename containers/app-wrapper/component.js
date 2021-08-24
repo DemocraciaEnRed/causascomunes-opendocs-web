@@ -81,7 +81,17 @@ export default class extends Component {
     Keycloak = require('keycloak-js')
     const keycloak = await Keycloak(keycloakOptions)
     try {
-      const authenticated = await keycloak.init({ onLoad: 'check-sso', promiseType: 'native' })
+      /**
+       * https://stackoverflow.com/questions/60622192/keycloak-session-cookies-are-missing-within-the-token-request-with-the-new-chro
+       * If you are facing this issue while using keycloak-js adapter.
+       * Then the reason for this issue:
+       * By default, the JavaScript adapter creates a hidden iframe that is used to detect if a Single-Sign Out has occurred. This does not require any network traffic, instead the status is retrieved by looking at a special status cookie.
+       * Workaround (Not a fix):
+       * This feature can be disabled by setting checkLoginIframe: false in the options passed to the init method.
+       * eg.,
+       * keycloak.init({ onLoad: 'login-required', checkLoginIframe: false })
+       */
+      const authenticated = await keycloak.init({ onLoad: 'check-sso', promiseType: 'native', checkLoginIframe: false })
       const isAuthor = authenticated ? await keycloak.hasRealmRole('accountable') : false
       const profile = authenticated && await keycloak.loadUserInfo()
       const user = authenticated ? await this.fetchMe(keycloak.token) : null
