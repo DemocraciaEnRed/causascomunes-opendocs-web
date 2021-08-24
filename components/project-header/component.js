@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Icon from 'react-icons-kit'
+import { checkSquareO } from 'react-icons-kit/fa/checkSquareO'
+import { squareO } from 'react-icons-kit/fa/squareO'
 import ProjectHeaderWrapper from '../../elements/project-header-wrapper/component'
 import CausaAvatar from '../../elements/causa-avatar/component'
 import ProjectVersionData from '../../components/project-version-data/component'
@@ -16,6 +19,9 @@ import ArticlesCommentsCounter from '../../elements/articles-comments-counter/co
 import ProjectBreadcrumb from '../project-breadcrumb/component'
 import ClosedProposal from '../closed-proposal/component'
 import SharerSocial from '../../elements/sharer-social/component'
+import ModeBar from '../../components/mode-bar/component'
+import ModeButton from '../../elements/mode-button/component'
+import ModeBarLinkButton from '../../elements/mode-bar-link-button/component'
 
 const ProjectHeaderContainer = styled.div`
   min-height: 383px;
@@ -56,8 +62,12 @@ const TopBarWrapper = styled.div`
   }
   `
 
-const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, togglePublish, contextualCommentsCount, contributionsCount, contributorsCount }) => (
+const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, togglePublish, contextualCommentsCount, contributionsCount, contributorsCount, currentSection, withComments }) => (
   <ProjectHeaderContainer img={project.currentVersion.content.imageCover}>
+    <ProjectBreadcrumb
+      title={project.currentVersion.content.title}
+      id={project._id}
+      section={section} />
     <ProjectHeaderWrapper>
       <TopBarWrapper>
         <CausaAvatar projectId={project._id} />
@@ -90,6 +100,22 @@ const ProjectHeader = ({ project, section, isPublished, isAuthor, setPublish, to
           contributors={contributorsCount}
           contributions={contributionsCount}
           contextualComments={contextualCommentsCount} />
+      }
+      {currentSection === '/propuesta' &&
+        <ModeBar>
+          <ModeBarLinkButton active>Presentación</ModeBarLinkButton>
+          <ModeBarLinkButton href={{ pathname: '/articulado', query: { id: project._id } }}>Artículos</ModeBarLinkButton>
+        </ModeBar>
+      }
+      {currentSection === '/articulado' &&
+        <ModeBar>
+          <ModeBarLinkButton href={{ pathname: '/propuesta', query: { id: project._id } }}>Presentación</ModeBarLinkButton>
+          <ModeBarLinkButton active>Artículos</ModeBarLinkButton>
+          <ModeButton>
+            {withComments ? <Icon icon={squareO} size={20} /> : <Icon icon={checkSquareO} size={20} />}&nbsp;
+            Modo lectura
+          </ModeButton>
+        </ModeBar>
       }
     </ProjectHeaderWrapper>
   </ProjectHeaderContainer>

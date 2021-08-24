@@ -15,7 +15,7 @@ const ProjectBodyContainer = styled.div`
   margin-right:auto;
   margin-left:auto;
   // padding:5% 20% 0% 10%;
-  padding: 3% 20% 0% 3.5%;
+  padding: 0px 3.5% 0% 3.5%;
   
   @media (max-width:769px){
     padding:5% 0px;
@@ -48,7 +48,7 @@ const BoldP = styled.p`
 
 const ProjectBody = ({ project }) => (
   <ProjectBodyContainer>
-    <ProjectLinkArticulate id={project._id} />
+    {/* <ProjectLinkArticulate id={project._id} /> */}
     <ArticlesContext.Consumer>
       {
         ({ isAuthor, editMode, setYoutubeId, editedYoutubeId, newYoutubeId, setNewFields }) => (

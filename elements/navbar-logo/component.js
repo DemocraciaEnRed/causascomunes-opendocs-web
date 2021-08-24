@@ -26,9 +26,9 @@ const Logo = styled.div`
 const NavbarLogo = () => (
 
   <StyledLogo>
-    <a href='https://causascomunes.org/'>
+    <Link href='/'>
       <Logo />
-    </a>
+    </Link>
   </StyledLogo>
 
 )

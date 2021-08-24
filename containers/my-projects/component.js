@@ -17,13 +17,13 @@ const Grid = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 4.8rem 0 1.6rem;
   > div {
     margin-bottom: 56px;
   }
   @media (max-width: 1400px) {
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 `
 const getClosingDate = () => {

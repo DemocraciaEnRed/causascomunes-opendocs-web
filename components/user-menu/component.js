@@ -78,9 +78,7 @@ const Usermenu = ({ logout }) => (
   <StyledUl>
     <Li>
       <Link href={{ pathname: '/userprofile' }}>
-        <a>
-          <StyledA>Mi perfil</StyledA>
-        </a>
+        <StyledA>Mi perfil</StyledA>
       </Link>
     </Li>
     {/* { isAuthor &&

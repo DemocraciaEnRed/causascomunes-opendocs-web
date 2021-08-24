@@ -144,8 +144,8 @@ class Projects extends Component {
     } = this.state
     return (
       <Section id='projects'>
-        <TitleH2>Propuestas de ley.</TitleH2>
-        <SubtitleH3>Conocé las propuestas de ley que elaboramos de manera participativa y colaborativa. ¡Ayudanos a mejorarlas con tus comentarios y aportes sobre cada causa!</SubtitleH3>
+        <TitleH2>Propuestas</TitleH2>
+        <SubtitleH3>Conocé las propuestas que elaboramos de manera participativa y colaborativa. ¡Ayudanos a mejorarlas con tus comentarios y aportes sobre cada causa!</SubtitleH3>
         {projectsFiltered &&
           <Fragment>
             <Grid>

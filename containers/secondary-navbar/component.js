@@ -111,9 +111,7 @@ const LandingLink = ({ name, value }) => (
 
 const NavbarLink = ({ name, link }) => (
   <Link href={link}>
-    <a>
-      {name}
-    </a>
+    {name}
   </Link>
 )
 
@@ -136,7 +134,7 @@ class SecondaryNavbar extends Component {
       <SecondaryBar>
         <StyledSecondaryNavbarTitle />
         <LinkBar>
-          <NavbarDropdown className={"link " + (this.state.showDropdown ? "open" : "")}>
+          {/* <NavbarDropdown className={"link " + (this.state.showDropdown ? "open" : "")}>
             <span onClick={this.toggleDropdown}>
               Propuestas
               <Icon icon={chevronDown} size={12} />
@@ -146,7 +144,7 @@ class SecondaryNavbar extends Component {
                 <li key={i} onClick={this.toggleDropdown}><a href={causa.link}>{causa.name}</a></li>
               ))}
             </NavbarDropdownContent>
-          </NavbarDropdown>
+          </NavbarDropdown> */}
           {links.map((li, i) => {
             //return this.props.isLanding
             return false

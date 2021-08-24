@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const StyledSection = styled.section`
     margin-left: ${(props) => props.noMargin ? '0em' : '5em'};
-    padding: 8.4rem 4.3rem;
+    padding: 4rem 4rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

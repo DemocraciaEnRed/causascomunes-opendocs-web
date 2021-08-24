@@ -13,7 +13,7 @@ import HighlightMark from '../../elements/highlight-mark/component'
 import AddComment from '../../elements/add-comment/component'
 import getConfig from 'next/config'
 
-const { publicRuntimeConfig: { API_URL }} = getConfig()
+const { publicRuntimeConfig: { API_URL } } = getConfig()
 
 const StyledEditorWrapper = styled.div`
   width: 50%;
@@ -31,7 +31,7 @@ const StyledEditorWrapper = styled.div`
 `
 
 class UserEditor extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       value: null,
@@ -52,13 +52,13 @@ class UserEditor extends Component {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.withComments !== this.props.withComments) {
       this.forceUpdate()
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     if (this.props.value) {
       this.setState({
         value: Value.fromJSON(this.props.value)
@@ -68,7 +68,7 @@ class UserEditor extends Component {
 
   onSelect = (e) => {
     const selection = this.state.value.selection.toJSON()
-    if (selection.isFocused && (selection.anchor.offset !== selection.focus.offset) & !this.state.showAddComment) {
+    if (selection.isFocused && (selection.anchor.offset !== selection.focus.offset) && !this.state.showAddComment) {
       const s = findDOMRange(this.state.value.selection).getBoundingClientRect()
       this.setState({
         showAddComment: true,
@@ -98,8 +98,8 @@ class UserEditor extends Component {
   }
 
   onCommentHoverIn = (id) => (e) => {
-    const top = e.clientY - 125
-    const left = e.clientX - 100
+    const top = e.clientY
+    const left = e.clientX
     this.setState((prevState) => {
       return {
         showAddComment: false,
@@ -146,7 +146,7 @@ class UserEditor extends Component {
     }
   }
 
-  render () {
+  render() {
     if (!this.state.value) return null
     return (
       <StyledEditorWrapper>
@@ -179,3 +179,4 @@ class UserEditor extends Component {
 }
 
 export default WithUserContext(UserEditor)
+

@@ -26,17 +26,21 @@ const StyledEditorWrapper = styled.div`
     margin-top:4rem;
     max-width: 74%;
     @media (max-width: 1024px) {
-    max-width:60%;
-  }
+      max-width:60%;
+    }
     @media (max-width: 700px) {
       max-width:100%;
     }
-    // span {
-    //   font-size: 1.8rem;
-    //   line-height: 1.89;
-    //   color: #203340;
-    //   padding: 6.5px 0px;
-    // }
+    span {
+      font-size: 1.8rem;
+      line-height: 1.89;
+      @media (max-width: 700px) {
+      // line-height: 1.89;
+      }
+      color: #203340;
+      // padding: 6.5px 0px;
+      padding: 4.5px 0px;
+    }
   }
 `
 

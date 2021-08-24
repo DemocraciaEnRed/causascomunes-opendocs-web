@@ -7,18 +7,25 @@ import CardContent from '../../elements/card-content/component'
 import CardSocial from '../../elements/card-social/component'
 
 const CardContainer = styled.div`
-  width: 370px;
-  height: 390px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 1% 30px;
+  width: 23%;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.05);
   background-color: #ffffff;
   border: solid 1px #e9e9e9;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
   background: #fff;
   box-sizing: border-box;
   cursor: pointer;
-  margin-bottom: 4rem;
+  display: block;
+  position: relative;
+  @media (max-width: 1408px) {
+    width: 31%;
+    }
+  @media (max-width: 1216px) {
+    width: 48%;
+    }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 const baseImgDir = '/static/assets/images-banners-propuestas'
@@ -38,19 +45,21 @@ const causasImgs = {
 }
 
 const Card = ({ project }) => (
-  <Link href={{ pathname: '/articulado', query: { id: project._id } }}>
-    <a>
-      <CardContainer>
-        <CardHeader img={ project.id in causasImgs ? causasImgs[project.id] : project.currentVersion.content.imageCover } published={project.published} />
-        <CardContent
-          title={project.currentVersion.content.title}
-          authorId={project.author._id}
-          userId={project.author._id}
-          name={project.author.fullname}
-          party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''}
-          projectId={project.id} />
-      </CardContainer>
-    </a>
+  <Link href={{ pathname: '/propuesta', query: { id: project._id } }}>
+    <CardContainer>
+      <CardHeader hasImage={!!project.currentVersion.content.imageCover} img={ project.id in causasImgs ? causasImgs[project.id] : project.currentVersion.content.imageCover } published={project.published} />
+      <CardContent
+        title={project.currentVersion.content.title}
+        authorId={project.author._id}
+        userId={project.author._id}
+        name={project.author.fullname}
+        hasImage={!!project.currentVersion.content.imageCover}
+        party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''}
+        projectId={project.id} />
+      <CardSocial commentaries={project.commentsCount}
+        closed={project.closed}
+        apoyosCount={project.apoyosCount} />
+    </CardContainer>
   </Link>
 )
 

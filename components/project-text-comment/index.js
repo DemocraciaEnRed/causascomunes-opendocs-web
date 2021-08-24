@@ -5,13 +5,13 @@ import CommentCounterWrapper from './comment-wrapper'
 import CommentMark from './comment-mark'
 
 export const CommentCounterContext = React.createContext({
-    addId: null,
-    removeId: null,
-  })
+  addId: null,
+  removeId: null,
+})
 
 export default (options) => {
   return {
-    renderMark (props, editor, next) {
+    renderMark(props, editor, next) {
       if (props.mark.type === 'comment') return <CommentMark {...props} />
       return next()
     },
@@ -19,7 +19,7 @@ export default (options) => {
       <CommentCounterWrapper
         onClick={options.onClick}
         isClosed={options.isClosed} >
-        { next() }
+        {next()}
       </CommentCounterWrapper>
   }
 }

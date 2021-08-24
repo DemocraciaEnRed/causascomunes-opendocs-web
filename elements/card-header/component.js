@@ -5,14 +5,19 @@ import Icon from 'react-icons-kit/Icon'
 import { eyeSlash } from 'react-icons-kit/fa/eyeSlash'
 
 const Wrapper = styled.div`
-  width: 368px;
-  height: 226px;
-  background-color: #1b95ba;
-  background-image: url('${(props) => props.img}');
-  overflow:hidden;
-  background-size: contain;
-  background-position: center;
-  // position: relative;
+width: 100%;
+height: 150px;
+background-color: #1b95ba;
+background-image: url('${(props) => props.img}');
+overflow:hidden;
+background-size: cover;
+background-position: center;
+position: relative;
+`
+
+const CoverImage = styled.img`
+  width: 100%;
+  //max-height:126px;
 `
 
 const Label = styled.span`
@@ -34,13 +39,16 @@ const Label = styled.span`
   bottom: 7px
 `
 
-const CardHeader = ({ img, published }) => (
-  <Wrapper img={img}>
-    { !published && <Label><Icon icon={eyeSlash} style={{ verticalAlign: 'text-bottom', marginRight: '5px' }} size={14} />Oculto</Label>}
-  </Wrapper>
-)
+const CardHeader = ({ hasImage, img, published }) => {
+  return (
+    <Wrapper img={img}>
+      {!published && <Label><Icon icon={eyeSlash} style={{ verticalAlign: 'text-bottom', marginRight: '5px' }} size={14} />Oculto</Label>}
+    </Wrapper>
+  )
+}
 
 CardHeader.propTypes = {
+  hasImage: PropTypes.bool,
   img: PropTypes.string,
   published: PropTypes.bool
 }

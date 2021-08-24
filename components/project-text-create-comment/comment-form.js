@@ -57,7 +57,7 @@ const CommentFormContent = styled.div`
   padding-top:2rem;
 `
 const CommentFormHeader = styled.div`
-  padding: 5px;
+  padding: 5px
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background-color: #5c97bc;
@@ -133,7 +133,7 @@ const Close = styled.button`
 `
 
 class CommentForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       value: '',
@@ -145,7 +145,7 @@ class CommentForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange (event) {
+  handleChange(event) {
     this.setState({ value: event.target.value })
   }
 
@@ -214,7 +214,7 @@ class CommentForm extends Component {
       .finally(() => { this.turnOffStatus() })
   }
 
-  render () {
+  render() {
     return (
       <Fragment>
         {!this.state.status
@@ -235,15 +235,15 @@ class CommentForm extends Component {
             <CommentFormFooter onClick={this.handleSubmit}>Enviar comentario</CommentFormFooter>
           </CommentFormContainer>
 
-          : <CommentStatus style={{ top: this.props.top }} color={this.state.error}>
-            <IconDiv color={this.state.error}>
+          : <CommentStatus style={{ top: this.props.top }} color={this.state.error ? 'true' : ''}>
+            <IconDiv color={this.state.error ? 'true' : ''}>
               {!this.state.error ? <Icon icon={checkCircleO} /> : <Icon icon={timesCircleO} />}
             </IconDiv>
 
             <TextDiv>
               <Close onClick={this.props.handleClose}>&times;</Close>
               <TextTitle>{!this.state.error ? 'Gracias por tu aporte' : 'Ha ocurrido un error'}</TextTitle>
-              <Text>{!this.state.error ? 'Su comentario ha sido enviado.' : 'Lo sentimos. Por favor intente nuevamente más tarde.'}</Text>
+              <Text>{!this.state.error ? 'Su comentario ha sido enviado al diputado y sus asesores.' : 'Lo sentimos. Por favor intente nuevamente más tarde.'}</Text>
             </TextDiv>
           </CommentStatus>
         }

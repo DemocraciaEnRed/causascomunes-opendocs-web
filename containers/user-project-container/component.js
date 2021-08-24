@@ -50,7 +50,7 @@ export default class extends Component {
   render () {
     const { project, section, fetchDocument } = this.props
     const { withComments, isPublished } = this.state
-    if (!project) return null
+    if (!project || !project.document) return null
     const { isAuthor } = project
     return (
       <div className='user-container'>
@@ -76,7 +76,9 @@ export default class extends Component {
             isAuthor={isAuthor}
             contributorsCount={project.contributorsCount}
             contextualCommentsCount={project.contextualCommentsCount}
-            contributionsCount={project.contributionsCount} />
+            contributionsCount={project.contributionsCount}
+            currentSection={this.props.section}
+            withComments={withComments} />
           {this.props.section === '/propuesta' &&
           <Fragment>
             <ProjectBody project={project.document} />
@@ -85,10 +87,6 @@ export default class extends Component {
           }
           {this.props.section === '/articulado' &&
           <Fragment>
-            <ModeBar>
-              <ModeButton withComments={false}>Vista lectura</ModeButton>
-              <ModeButton withComments >Vista con comentarios</ModeButton>
-            </ModeBar>
             <UserEditor
               value={project.document.currentVersion.content.articles}
               isAuthor={isAuthor}

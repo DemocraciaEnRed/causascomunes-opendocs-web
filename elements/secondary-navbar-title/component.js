@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const StyledSecondaryNavbarTitle = styled.h2`
   font-size: 2rem;
@@ -8,15 +9,20 @@ const StyledSecondaryNavbarTitle = styled.h2`
   @media (max-width: 640px) {
     font-size: 1.5rem;
   }
+  &:hover{
+    cursor: pointer;
+  }
 `
 const Span = styled.span`
   font-family: var(--bold);
 `
 
 const SecondaryNavbarTitle = () => (
-  <StyledSecondaryNavbarTitle>
-   <a href="/">Portal de <Span>Propuestas de Leyes</Span></a>
-  </StyledSecondaryNavbarTitle>
+  <Link href='/'>
+    <StyledSecondaryNavbarTitle>
+      Portal de <Span>Propuestas</Span>
+    </StyledSecondaryNavbarTitle>
+  </Link>
 )
 
 export default SecondaryNavbarTitle

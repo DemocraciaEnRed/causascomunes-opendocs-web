@@ -5,17 +5,17 @@ import { CommentCounterContext } from './index'
 
 const StyledCommentSpan = styled.span`
   background-color: white;
-  background-color: rgba(92, 151, 188, .4);
+  background-color: rgba(239, 136, 93, .25);
   cursor:pointer;
 `
 
 class CommentSpanWrapper extends Component {
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.props.removeId()
   }
 
-  render () {
+  render() {
     return (
       <Fragment>
         {this.props.children}
@@ -25,14 +25,14 @@ class CommentSpanWrapper extends Component {
 }
 
 export default class CommentMark extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       id: null
     }
   }
 
-  render () {
+  render() {
     const id = this.props.mark.toJSON().data['id']
     return (
       <CommentCounterContext.Consumer>

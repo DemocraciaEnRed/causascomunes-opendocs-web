@@ -5,7 +5,7 @@ import { getVisibleSelectionRect } from 'get-selection-range'
 import ToolsWrapper from './tools-wrapper'
 
 export default class AddCommentWrapper extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       top: 0,
@@ -50,7 +50,7 @@ export default class AddCommentWrapper extends Component {
       // } = containerBound
       const left =
         (rect.left +
-        (rect.width / 2)) -
+          (rect.width / 2)) -
         containerBound.left
       console.log(rect)
       const top =
@@ -70,26 +70,26 @@ export default class AddCommentWrapper extends Component {
     this.setState({ showAddComment: false, showCommentForm: false })
   }
 
-  render () {
+  render() {
     return (
       <Fragment>
         <ToolsWrapper clearTools={this.clearTools}>
           {
             this.state.showAddComment &&
-              <AddComment
-                top={this.state.top}
-                left={this.state.left}
-                onClick={this.handleClickAdd} />
+            <AddComment
+              top={this.state.top}
+              left={this.state.left}
+              onClick={this.handleClickAdd} />
           }
           {
             this.state.showCommentForm &&
-              <CommentForm
-                decoration={this.decoration}
-                editor={this.props.editor}
-                id={this.props.id}
-                handleClose={this.clearTools}
-                pushComment={this.props.pushComment}
-                top={this.state.top} />
+            <CommentForm
+              decoration={this.decoration}
+              editor={this.props.editor}
+              id={this.props.id}
+              handleClose={this.clearTools}
+              pushComment={this.props.pushComment}
+              top={this.state.top} />
           }
         </ToolsWrapper>
         <div

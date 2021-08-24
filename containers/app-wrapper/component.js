@@ -18,7 +18,6 @@ let Keycloak
 export default class extends Component {
   state = {
     keycloak: null,
-    authenticating: true,
     authenticated: false,
     login: null,
     isAuthor: null,
@@ -29,8 +28,11 @@ export default class extends Component {
     return (await fetch(`${API_URL}/api/v1/users/me`, {
       'headers': {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token
-      }
+        'Authorization': 'Bearer ' + token,
+        'Pragma': 'no-cache',
+        'Cache-Control': 'no-cache'
+      },
+      cache: 'no-store'
     })).json()
   }
 
@@ -40,6 +42,12 @@ export default class extends Component {
   //     user: updatedUser
   //   })
   // }
+
+  setStateAsync = (state) => {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
 
   updateMe = async (newProfile) => {
     const updatedUser = await (await fetch(`${API_URL}/api/v1/users`, {
@@ -53,13 +61,13 @@ export default class extends Component {
     if (!updatedUser) {
       throw Error()
     }
-    this.setState({
+    await this.setStateAsync({
       user: updatedUser
     })
     return updatedUser
   }
 
-  async componentDidMount () {
+  async componentDidMount() {
     const keycloakOptions = {
       'url': AUTH_SERVER_URL,
       'realm': REALM,
@@ -93,12 +101,9 @@ export default class extends Component {
         authenticated: false
       })
     }
-    this.setState({
-      authenticating: false
-    })
   }
 
-  render () {
+  render() {
     let value = this.state
     value.fetchMe = this.fetchMe
     value.updateMe = this.updateMe
